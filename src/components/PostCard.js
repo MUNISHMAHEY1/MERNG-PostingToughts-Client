@@ -31,16 +31,29 @@ function PostCard(props){
                         </div>
                         <div className="extra content">
                             <LikeButton  user={user} post={{ id, likes, likeCount }}></LikeButton>
-                            <Link to={`/posts/${id}`}>
-                                <div className="ui labeled button" data-tooltip="Add a Comment" data-inverted="">
-                                    <div className="ui purple button basic">
-                                        <i className="comments icon"></i>
+                            { user ? (
+                                <Link to={`/posts/${id}`}>
+                                    <div className="ui labeled button" data-tooltip="Add a Comment" data-inverted="">
+                                        <div className="ui purple button basic">
+                                            <i className="comments icon"></i>
+                                        </div>
+                                        <div className="ui basic purple left pointing label">
+                                            {commentCount}
+                                        </div>
                                     </div>
-                                    <div className="ui basic purple left pointing label">
-                                        {commentCount}
+                                </Link>
+                            ) : (
+                                <Link to={`/login`}>
+                                    <div className="ui labeled button" data-tooltip="Add a Comment" data-inverted="">
+                                        <div className="ui purple button basic">
+                                            <i className="comments icon"></i>
+                                        </div>
+                                        <div className="ui basic purple left pointing label">
+                                            {commentCount}
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
+                                </Link>
+                            )}
                             { user && user.username === username && (
                                 <DeleteButton postId={id}/>
                             )}

@@ -54,11 +54,7 @@ function SinglePost(props){
         postMarkup = (
             <div className="ui grid">
                 <div className="row">
-                    <div className="three wide column" 
-                        data-tooltip={user.username} 
-                        data-position="top right" 
-                        data-inverted=""
-                        >
+                    <div className="three wide column">
                         <img className="right floated mini ui image" 
                             src={avatar} 
                             alt="avatar" 

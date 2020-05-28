@@ -21,9 +21,9 @@ function Login(props) {
             context.login(userData);
             props.history.push('/');
         },
-        onError(err){
+        onError(err) {
             setErrors(err.graphQLErrors[0].extensions.exception.errors);
-        },
+          },
         variables: values
     })
 
