@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
+import Error from './pages/Error';
 import MenuBar from './components/MenuBar';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <AuthRoute exact path="/register" component={ Register }/>
             <Route exact path="/posts/:postId" component={ SinglePost }/>
             <Route exact path="/users/:userId" component={ Profile }/>
+            <Route component={ Error }></Route>
         </Router>
       </AuthProvider>
   );
