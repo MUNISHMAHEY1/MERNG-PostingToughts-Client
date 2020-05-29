@@ -6,7 +6,6 @@ import PostCard from '../components/PostCard';
 import { Link } from 'react-router-dom'; 
 import { AuthContext } from '../context/AuthContext';
 import { FETCH_POSTS_QUERY } from '../util/graphql';
-import PostForm from '../components/PostForm';
 
 function Profile() {
     const { user } = useContext(AuthContext);
@@ -59,12 +58,6 @@ function Profile() {
                 </div>
                 
                 <div className="row">
-                    { user && (
-                        <div className="column">
-                            <PostForm></PostForm><br></br>
-                        </div>
-                    )}
-                    
                     { loading ? (
                         <h1>loading posts...</h1>
                     ): (
