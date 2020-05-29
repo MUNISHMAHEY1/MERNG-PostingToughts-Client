@@ -58,6 +58,12 @@ function Profile() {
                 </div>
                 
                 <div className="row">
+                    { user && (
+                        <div className="column">
+                            <PostForm></PostForm><br></br>
+                        </div>
+                    )}
+
                     { loading ? (
                         <h1>loading posts...</h1>
                     ): (
