@@ -40,6 +40,7 @@ function Register(props) {
             <Form onSubmit={onsubmitHandler} noValidate className={loading ? "loading" : ''}>
                 <h1>Register</h1>
                 <Form.Input
+                    className="form-input"
                     label="Username"
                     placeholder="Username"
                     name="username"
@@ -49,6 +50,7 @@ function Register(props) {
                     onChange={onChangeHanlder}
                 />
                 <Form.Input
+                    className="form-input"
                     label="Email"
                     placeholder="Email"
                     name="email"
@@ -58,6 +60,7 @@ function Register(props) {
                     onChange={onChangeHanlder}
                 />
                 <Form.Input
+                    className="form-input"
                     label="Password"
                     placeholder="Password"
                     name="password"
@@ -67,6 +70,7 @@ function Register(props) {
                     onChange={onChangeHanlder}
                 />
                 <Form.Input
+                    className="form-input"
                     label="Confirm Password"
                     placeholder="Confirm Password"
                     name="confirmPassword"

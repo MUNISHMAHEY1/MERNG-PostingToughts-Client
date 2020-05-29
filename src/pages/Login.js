@@ -37,6 +37,7 @@ function Login(props) {
             <Form onSubmit={onsubmitHandler} noValidate className={loading ? "loading" : ''}>
                 <h1>Login</h1>
                 <Form.Input
+                    className="form-input"
                     label="Username"
                     placeholder="Username"
                     name="username"
@@ -46,6 +47,7 @@ function Login(props) {
                     onChange={onChangeHanlder}
                 />
                 <Form.Input
+                    className="form-input"
                     label="Password"
                     placeholder="Password"
                     name="password"

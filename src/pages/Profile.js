@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import avatar from '../images/avatar.png';
 import moment from 'moment';
 import PostCard from '../components/PostCard';
+import PostForm from '../components/PostForm'
 import { Link } from 'react-router-dom'; 
 import { AuthContext } from '../context/AuthContext';
 import { FETCH_POSTS_QUERY } from '../util/graphql';

@@ -12,3 +12,8 @@ body {
     width:40rem;
     margin: auto;
 }
+@media (max-width: 450px){
+    .form-input {
+        max-width: 380px;
+    }
+}
