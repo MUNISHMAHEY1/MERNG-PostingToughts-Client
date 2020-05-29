@@ -25,7 +25,7 @@ function MenuBar() {
                 <Menu.Item 
                     name={user.username}
                     as={Link}
-                    to="/"
+                    to={`/users/${user.id}`}
                     /> 
                 <Menu.Item 
                     name="logout"

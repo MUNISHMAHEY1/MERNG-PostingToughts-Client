@@ -5,6 +5,7 @@ import { FETCH_POSTS_QUERY } from '../util/graphql';
 import PostCard from '../components/PostCard';
 import { AuthContext } from '../context/AuthContext';
 import PostForm from '../components/PostForm';
+
 function Home() {
     const { user } = useContext(AuthContext);
     const { loading, data} = useQuery(FETCH_POSTS_QUERY);
