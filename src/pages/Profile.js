@@ -44,7 +44,7 @@ function Profile() {
                         <div className="meta">
                         <span className="date"> Joined on {moment(user.createdAt).format('YYYY/MM/DD')}</span>
                         </div>
-                        <div className="description">
+                        <div className="email">
                             <b>Email:</b> {user.email}
                         </div>
                     </div>
@@ -84,5 +84,5 @@ function Profile() {
     return profileMarkup;
 }
 
-export default Profile
+export default Profile;
  

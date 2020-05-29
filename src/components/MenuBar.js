@@ -11,7 +11,7 @@ function MenuBar() {
     
     const [ activeItem, setActiveItem ] = useState(path);
     const handleClick = (e, { name }) => setActiveItem(name);
-    
+
     const menuBar = user ? (
         <Menu pointing secondary size="massive" color='teal'>
             <Menu.Item 
@@ -26,6 +26,7 @@ function MenuBar() {
                     name={user.username}
                     as={Link}
                     to={`/users/${user.id}`}
+                    style={{color:"blue", fontWeight:"bold"}}
                     /> 
                 <Menu.Item 
                     name="logout"

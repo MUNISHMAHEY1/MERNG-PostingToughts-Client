@@ -22,7 +22,7 @@ function PostCard(props){
                         <hr></hr>
                         <div className="meta" data-tooltip="Open the Post" data-position="top left" data-inverted="">
                             <Link to={`/posts/${id}`}>
-                                {moment(createdAt).fromNow(true)}
+                                {moment(createdAt).fromNow()}
                             </Link>
                         </div>
                         <div className="description">
