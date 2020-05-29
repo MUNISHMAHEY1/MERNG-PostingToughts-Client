@@ -11,13 +11,13 @@ function Home() {
     const { loading, data} = useQuery(FETCH_POSTS_QUERY);
     
     return (
-        <div>
+        <div >
             <div className="ui three column grid">
                 <div className="row page-title">
                     <h1>Recent Posts</h1>
                 </div>
 
-                <div className="row">
+                <div className="row" id="postcards">
                     { user && (
                         <div className="column">
                             <PostForm></PostForm>

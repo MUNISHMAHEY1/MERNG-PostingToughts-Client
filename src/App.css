@@ -30,6 +30,10 @@ body {
         grid-row-start: 1;
         grid-row-end: 4;
     }
+    #postcards {
+        display: grid;
+        grid-template-columns: repeat(1, [col-start] 300% [col-end]);
+    }
 }
 
 @media (max-width: 450px){
