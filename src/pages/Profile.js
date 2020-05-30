@@ -29,9 +29,9 @@ function Profile() {
         profileMarkup = (
             <div className="ui grid ">
             <div className="row">
-                <div className="avatar-card">
-                    <div className="four wide column">
-                        <div className="ui card" style={{position: "sticky", top: 10}}>
+                <div id="avatar-card">
+                    <div className="four wide column" style={{position: "sticky", top: 10}} >
+                        <div className="ui card" >
                             <div>
                                 <img className="right floated mini ui image" 
                                     src={avatar} 
@@ -54,24 +54,24 @@ function Profile() {
                 </div>
                 
                     <div className="twelve wide column">
-                    <div className="mypost-card">
-                        <div className="row page-title">
-                            <h1>Your Posts</h1><br></br>
-                        </div>
-                        
+                    <div id="mypost-card">                
                         <div className="row">
+                            
                             { user && (
-                                <div className="column">
-                                    <PostForm></PostForm><br></br>
+                                <div className="column" id="recentposts">
+                                   <br></br> <PostForm></PostForm><br></br>
                                 </div>
                             )}
-
+                            <div className="row page-title">
+                                <h1 style={{marginBottom:"2rem"}}>Your Recent Posts</h1>
+                            </div>
+                            
                             { loading ? (
                                 <h1>loading posts...</h1>
                             ): (
                                 data.getPosts && data.getPosts.filter((p) => p.username === user.username).map((post) => (
-                                    <div className="column" key={post.id}>
-                                        <PostCard post={post}/><br></br>
+                                    <div className="column" id="recentposts" key={post.id}>
+                                        <PostCard post={post} /><br></br>
                                     </div>
                                 ))
                             )}

@@ -20,7 +20,7 @@ function Home() {
                 <div className="row" id="postcards">
                     { user && (
                         <div className="column">
-                            <PostForm></PostForm>
+                            <PostForm></PostForm><br></br>
                         </div>
                     )}
 

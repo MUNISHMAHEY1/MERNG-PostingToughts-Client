@@ -12,11 +12,15 @@ body {
     width:40rem;
     margin: auto;
 }
+#nav-link{
+    font-weight:"bold";
+}
 @media (max-width: 450px){
     .form-input {
         max-width: 320px;
     }
     #avatar-card {
+        margin-left: 1.5rem;
         display: grid;
         grid-template-columns: auto auto auto;
         grid-gap: 10px;
@@ -24,6 +28,7 @@ body {
         grid-column-end: 4;
     }
     #mypost-card {
+        margin: 0rem;
         display: grid;
         grid-template-columns: auto auto auto;
         grid-gap: 10px;
@@ -31,8 +36,14 @@ body {
         grid-row-end: 4;
     }
     #postcards {
+        margin-right: 0.5rem;
         display: grid;
         grid-template-columns: repeat(1, [col-start] 300% [col-end]);
+    }
+    #recentposts {
+        margin: 0rem;
+        display: grid;
+        grid-template-columns: repeat(1, [col-start] 140% [col-end]);
     }
 }
 

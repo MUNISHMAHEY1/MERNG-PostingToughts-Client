@@ -26,11 +26,12 @@ function MenuBar() {
                     name={user.username}
                     as={Link}
                     to={`/users/${user.id}`}
-                    style={{color:"blue", fontWeight:"bold"}}
+                    id="nav-link"
                     /> 
                 <Menu.Item 
                     name="logout"
                     onClick={logout}
+                    id="nav-link"
                     /> 
             </Menu.Menu>    
         </Menu>
