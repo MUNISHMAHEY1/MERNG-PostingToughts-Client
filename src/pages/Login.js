@@ -33,7 +33,7 @@ function Login(props) {
     }
 
     return (
-        <div className="form-container">
+        <div className="form-container" id="login-page">
             <Form onSubmit={onsubmitHandler} noValidate className={loading ? "loading" : ''}>
                 <h1>Login</h1>
                 <Form.Input
@@ -57,8 +57,9 @@ function Login(props) {
                     onChange={onChangeHanlder}
                 />
                 <Button type="submit" primary>
-                    Login
+                    LOGIN
                 </Button>
+                
             </Form>
             {Object.keys(errors).length > 0 && (
                 <div className="ui error message">
